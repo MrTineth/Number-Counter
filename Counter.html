@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .counter-container {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      margin: auto;
+      max-width: 100%;
+      padding: 2rem;
+}
+
+.counter-card {
+      align-items: center;
+      border-radius: 10px;
+      display: flex;
+      height: 15rem;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+}
+
+.count-numbers {
+      animation: count-numbers 10s linear infinite forwards;
+      background-color: #f3f3f3;
+      counter-reset: count 0;
+}
+
+.count-numbers::before {
+      color: #000;
+      content: counter(count);
+      font-size: 5rem;
+}
+
+@keyframes count-numbers {
+      0% {
+        counter-increment: count 0;
+      }
+
+      10% {
+        counter-increment: count 1;
+      }
+
+      20% {
+        counter-increment: count 2;
+      }
+
+      30% {
+        counter-increment: count 3;
+      }
+
+      40% {
+        counter-increment: count 4;
+      }
+
+      50% {
+        counter-increment: count 5;
+      }
+
+      60% {
+        counter-increment: count 6;
+      }
+
+      70% {
+        counter-increment: count 7;
+      }
+
+      80% {
+        counter-increment: count 8;
+      }
+
+      90% {
+        counter-increment: count 9;
+      }
+
+      100% {
+        counter-increment: count 10;
+      }
+}
+    </style>
+</head>
+<body>
+    
+        <main class="counter-container">
+        <div class="counter-card count-numbers"></div>
+        </main>
+        
+</body>
+</html>
